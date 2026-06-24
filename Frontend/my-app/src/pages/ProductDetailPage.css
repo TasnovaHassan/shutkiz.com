@@ -1,0 +1,5 @@
+/* ProductDetailPage.css */
+.product-detail-container {
+  padding: var(--space-8) 0;
+  background-color: var(--white);
+}

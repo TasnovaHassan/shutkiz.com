@@ -1,0 +1,79 @@
+.testimonials-section {
+  padding: var(--space-20) 0;
+  background: var(--sand);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.t-stars { font-size: 0.85rem; letter-spacing: 2px; }
+.t-text {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  flex: 1;
+  font-style: italic;
+}
+.t-author { display: flex; align-items: center; gap: var(--space-3); }
+.t-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--ocean);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+.t-name { font-weight: 600; font-size: 0.875rem; color: var(--gray-800); }
+.t-city { font-size: 0.75rem; color: var(--gray-400); }
+
+.cta-banner {
+  padding: var(--space-16) 0;
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-light) 100%);
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.cta-text h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: var(--space-2);
+}
+.cta-text p { color: rgba(255,255,255,0.8); font-size: 1rem; }
+.cta-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: var(--white);
+  transition: var(--transition);
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
+
+@media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .cta-inner { text-align: center; justify-content: center; }
+  .cta-text h2 { font-size: 1.5rem; }
+}

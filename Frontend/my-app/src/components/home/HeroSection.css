@@ -1,0 +1,31 @@
+.hero-slider-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.hero-slide-item {
+  width: 100%;
+}
+
+.hero-slide-item a {
+  display: block;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Customize slick dots */
+.hero-slider-section .slick-dots {
+  bottom: 15px;
+}
+
+.hero-slider-section .slick-dots li button:before {
+  color: #EF4444;
+}

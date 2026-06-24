@@ -1,0 +1,8 @@
+.featured-section {
+  padding: var(--space-20) 0;
+  background: var(--gray-50);
+}
+.featured-more {
+  text-align: center;
+  margin-top: var(--space-12);
+}
