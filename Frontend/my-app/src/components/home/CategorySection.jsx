@@ -1,38 +1,30 @@
-import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
+import React from 'react';
 import './CategorySection.css';
 
-export default function CategorySection({ categories = [] }) {
-  if (!categories.length) return null;
+// Dummy data matching the items in image_3eb09e.png
+const categories = [
+  { id: 1, name: 'Premium Dry Fish', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPremium%20Dry%20Fish.260bd593.png&w=96&q=75' },
+  { id: 2, name: 'Raw Fish', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFresh%20Sea%20Fish.da7bbd8c.png&w=96&q=75' },
+  { id: 3, name: 'Balachao', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBalachao.0f218449.png&w=96&q=75' },
+  { id: 4, name: 'Fish Chips', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFish%20Chips.7c4770df.png&w=96&q=75' },
+  { id: 5, name: 'Recipe Book', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDry%20Fish%20Recipe%20Book.92843c47.png&w=96&q=75' },
+  { id: 6, name: 'Combo Package', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCombo%20Box.27d53b71.png&w=96&q=75' },
+  { id: 7, name: 'Dry Fish Gift Box', image: 'https://www.shutkiz.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGift%20Box.59508f4e.png&w=96&q=75' },
+];
+
+const CategorySection = () => {
   return (
-    <section className="category-section">
-      <div className="container">
-        <div className="section-header">
-          <span className="section-eyebrow">Browse By Type</span>
-          <h2 className="section-title">Shop by Category</h2>
-          <p className="section-desc">From classic Loitta to rare Ilish — explore our full range of premium dry fish</p>
+    <div className="category-section">
+      {categories.map((cat) => (
+        <div key={cat.id} className="category-item">
+          <div className="image-circle">
+            <img src={cat.image} alt={cat.name} />
+          </div>
+          <p>{cat.name}</p>
         </div>
-        <div className="category-grid">
-          {categories.map(cat => (
-            <Link key={cat._id} to={`/products?category=${cat._id}`} className="category-card">
-              <div className="category-img-wrap">
-                <img
-                  src={cat.image || `https://placehold.co/200x200/e8d5b7/3d2007?text=${encodeURIComponent(cat.name)}`}
-                  alt={cat.name}
-                  className="category-img"
-                />
-                <div className="category-overlay">
-                  <FiArrowRight size={20} />
-                </div>
-              </div>
-              <div className="category-info">
-                <h3 className="category-name">{cat.name}</h3>
-                {cat.nameBn && <p className="category-name-bn">{cat.nameBn}</p>}
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
-}
+};
+
+export default CategorySection;
