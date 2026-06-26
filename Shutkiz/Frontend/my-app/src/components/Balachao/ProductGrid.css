@@ -1,0 +1,11 @@
+.balachao-grid-wrapper {
+  display: flex;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+  gap: 20px;
+  flex: 1;
+}
+

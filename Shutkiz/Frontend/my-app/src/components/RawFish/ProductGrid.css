@@ -1,0 +1,25 @@
+.rawfish-grid-wrapper {
+  display: flex;
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* ✅ responsive */
+  gap: 20px;
+  flex: 1;
+  max-width: 1200px;   /* ✅ same as Shutkiz container */
+  margin: 0 auto;      /* ✅ center the grid */
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 4 products side by side */
+  gap: 20px;
+  flex: 1;
+}
+
+
+
+

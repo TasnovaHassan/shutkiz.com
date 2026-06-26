@@ -1,0 +1,21 @@
+.sidebar {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 8px 0;
+}
+
+.sidebar input[type="checkbox"] {
+  margin-right: 8px;
+}

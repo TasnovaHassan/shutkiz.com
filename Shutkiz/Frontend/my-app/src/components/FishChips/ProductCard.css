@@ -1,0 +1,27 @@
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  
+  text-align: center;
+  background: #fff;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  background: #238eda;
+  color: white;
+  border: none;
+  padding: 8px 150px;
+  cursor: pointer;
+}
+
+.product-card .contact,
+.product-card .website {
+  font-size: 0.5rem;
+  margin-top: 5px;
+}
