@@ -10,6 +10,11 @@ import CartSidebar from './components/cart/CartSidebar';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import RawFish from './pages/RawFish';
+import Balachao from "./pages/Balachao";
+import FishChips from "./pages/FishChips";
+
+
 // import LoginPage from './pages/LoginPage';
 // import RegisterPage from './pages/RegisterPage';
 // import CheckoutPage from './pages/CheckoutPage';
@@ -47,13 +52,19 @@ export default function App() {
           <CartSidebar />
           <Routes>
             {/* Public */}
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} /> 
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:slug" element={<ProductDetailPage />} />
+            <Route path="/category/raw-fish" element={<RawFish />} />
+            <Route path="/category/balachao" element={<Balachao />} />
+            <Route path="/category/fish-chips" element={<FishChips />} />
+            
+
             {/* <Route path="/login" element={<LoginPage />} /> */}
             {/* <Route path="/register" element={<RegisterPage />} /> */}
             {/* <Route path="/about" element={<AboutPage />} /> */}
             {/* <Route path="/contact" element={<ContactPage />} /> */}
+           
 
             {/* Protected */}
             <Route element={<ProtectedRoute />}>
@@ -80,3 +91,4 @@ export default function App() {
     </AuthProvider>
   );
 }
+

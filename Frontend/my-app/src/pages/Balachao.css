@@ -1,0 +1,27 @@
+.balachao-page {
+  padding: 20px;
+}
+
+.banner {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+}
+
+.balachao-content {
+  display: flex;
+}
